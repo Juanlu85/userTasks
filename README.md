@@ -55,8 +55,19 @@ Nota: LOS SCRIPTS DE CREACIÓN DE TABLAS, ESTÁN EN EL DIRECTORIO /prueba/script
 /**
 * EJECUCIÓN
 **/
-A) Si se quiere ejecutar para depurar o hacer pruebas, basta con ejecutar como aplicación Java la clase:
+Ejecutar como aplicación Java la clase:
 com.mimacom.prueba.TasksApplication
 
 Una vez ejecutada la clase, se accede a través del navegador: http://localhost:8080/
+
+
+/**
+* Funcionalidad
+**/
+Al acceder a localhost:8080/ nos aparece una página de login. Este proyecto no valida el password, con lo que basta para acceder meter el email de unos de los usuarios insertados en la tabla 'users' de base de datos.
+La primera página que aparece es la vista global de tareas, donde podrá visualizar qué tareas tiene pendientes, y cuáles completadas.
+Mediante el botón de 'Create tarea' accede a la vista, para este fin. Se debe insertar el título y el detalle. No se ha puesto validación. Al pulsar guardar, aparecerá en la pantalla de tareas de usuario, la nueva tarea.
+Como opciones sobre las tareas se puede:
+*Eliminar: borraría la tarea.
+*Editar: podrá modificar los valores de la tarea o completarla.
 
