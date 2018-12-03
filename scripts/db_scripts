@@ -1,0 +1,44 @@
+CREATE TABLE users (
+	id_user INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	username VARCHAR(15) NOT NULL,
+	first_name VARCHAR(15) NOT NULL,
+	last_name VARCHAR(15),
+	email VARCHAR(64) NOT NULL,
+	creation_date DATE NOT NULL,
+	password VARCHAR(15) NOT NULL
+);
+
+
+insert into users (username, first_name, last_name, email, creation_date, password)
+values ('User1', 'Mimacom', 'Flowable', 'user1@mimacom.com', '2018-12-01 10:47:00', '1234');
+
+insert into users (username, first_name, last_name, email, creation_date, password)
+values ('User2', 'Mimacom', 'Flowable', 'user2@mimacom.com', '2018-12-01 10:48:00', '1234');
+
+insert into users (username, first_name, last_name, email, creation_date, password)
+values ('User3', 'Mimacom', 'Flowable', 'user3@mimacom.com', '2018-12-01 10:49:00', '1234');
+
+
+select * from users;
+
+create table tasks (
+	id_task INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	id_user INT(6) UNSIGNED,
+	title VARCHAR(32) NOT NULL,
+	detail VARCHAR(64) NOT NULL,
+	creation_date DATE NOT NULL,
+	modification_date DATE NOT NULL,
+	state varchar(16) not null default 'Pendiente' check (state in ('Pendiente', 'Completada')),
+    FOREIGN KEY (id_user) REFERENCES users(id_user) ON DELETE CASCADE
+);
+
+
+select * from tasks;
+
+insert into tasks (id_user, title, detail, creation_date, modification_date, state)
+values (1, 'Prueba tarea 1', 'Destalle 1', '2018-12-01 13:00:00','2018-12-01 13:00:00', 'Pendiente');
+
+alter table tasks modify column title VARCHAR(32) NOT NULL;
+
+
+
