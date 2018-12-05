@@ -72,6 +72,7 @@ Ejecutar la aplicación sin necesidad de tener el entorno instalado:
 	-	Ir al directorio donde se ha descomprimido el proyecto (carpeta principal)
 	-  Ejecutar:
 		> mvn spring-boot:run
+	-  Acceder: http://localhost:8080/
 
 
 
