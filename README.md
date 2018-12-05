@@ -9,6 +9,9 @@ Requisitos previos:
 3-  Maven
 4-  Conexión a internet, ya que depende de algunas librerías
 
+/**
+* Opción 1
+**/
 Para poner en marcha esta aplicación, se debe:
 1. Descargar el código en un IDE (Eclipse).
 2. Crear una base de datos en MySQL:
@@ -59,6 +62,17 @@ Ejecutar como aplicación Java la clase:
 com.mimacom.prueba.TasksApplication
 
 Una vez ejecutada la clase, se accede a través del navegador: http://localhost:8080/
+
+/**
+* Opción 2
+**/
+Ejecutar la aplicación sin necesidad de tener el entorno instalado:
+	- 	Descargar el codigo y descomprimir en un directorio.
+	-	Realizar los pasos 2, 3 4, 5, 6 y 7 de la opción 1.
+	-	Ir al directorio donde se ha descomprimido el proyecto (carpeta principal)
+	-  Ejecutar:
+		> mvn spring-boot:run
+
 
 
 /**
